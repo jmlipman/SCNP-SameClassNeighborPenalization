@@ -33,3 +33,7 @@ Official repository: https://github.com/facebookresearch/detectron2
 Official repository: https://github.com/instanseg/instanseg
 
 
+| File | Path |
+| -------- | ------- |
+| [compound_losses_scnp.py](InstanSeg/compount_losses_scnp.py) | instanseg/utils/loss/compound_losses_scnp.py |
+| [instanseg_loss.py](InstanSeg/instanseg_loss.py) | instanseg/utils/loss/instanseg_loss.py |

@@ -5,7 +5,7 @@ from monai.networks import one_hot
 import torch.nn.functional as F
 import numpy as np
 
-class CEDicePlusv8Loss(nn.Module):
+class SCNPCEDiceLoss(nn.Module):
     def __init__(self, weight_ce=1, weight_dice=1, ignore_label=None,
                  receptive_field=3):
         """
@@ -17,7 +17,7 @@ class CEDicePlusv8Loss(nn.Module):
         :param weight_ce:
         :param weight_dice:
         """
-        super(CEDicePlusv8Loss, self).__init__()
+        super(SCNPCEDiceLoss, self).__init__()
         if ignore_label is not None:
             ce_kwargs['ignore_index'] = ignore_label
 
