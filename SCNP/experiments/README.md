@@ -16,8 +16,8 @@ Official repository: https://github.com/MIC-DKFZ/nnUNet/tree/master
 
 | File | Path |
 | -------- | ------- |
-| [nnUNetTrainerSCNPLoss.py](nnUNet/nnUNetTrainerSCNPLoss.py) | /work3/jmvma/envs/vic/lib/python3.10/site-packages/nnunetv2/training/nnUNetTrainer/nnUNetTrainerSCNPLoss.py |
-| [compound_losses_scnp.py](nnUNet/compound_losses_scnp.py) | /work3/jmvma/envs/vic/lib/python3.10/site-packages/nnunetv2/training/loss/compound_losses_scnp.py |
+| [nnUNetTrainerSCNPLoss.py](nnUNetv2/nnUNetTrainerSCNPLoss.py) | /work3/jmvma/envs/vic/lib/python3.10/site-packages/nnunetv2/training/nnUNetTrainer/nnUNetTrainerSCNPLoss.py |
+| [compound_losses_scnp.py](nnUNetv2/compound_losses_scnp.py) | /work3/jmvma/envs/vic/lib/python3.10/site-packages/nnunetv2/training/loss/compound_losses_scnp.py |
 
 
 ## Detectron with Deeplabv3+
