@@ -8,7 +8,7 @@ Here, we provide the files that we modified to make SCNP run on these frameworks
 In order to reproduce our results, 1) download these frameworks from their official repositories, 2) make sure they can run on the datasets, and 3) modify the files involved in the optimization.
 Below, we provide a summary with the files that we modified and their location.
 
-Note: These are the files used to run <span style="text-decoration:overline">CEDice</span> (i.e., Cross Entropy and Dice loss optimizing only the SCNP-normalized logits).
+Note: These are the files used to run SCNP(CEDice) (i.e., Cross Entropy and Dice loss optimizing only the SCNP-normalized logits).
 
 ## nnUNetv2
 
