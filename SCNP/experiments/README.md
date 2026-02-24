@@ -8,9 +8,17 @@ Here, we provide the files that we modified to make SCNP run on these frameworks
 In order to reproduce our results, 1) download these frameworks from their official repositories, 2) make sure they can run on the datasets, and 3) modify the files involved in the optimization.
 Below, we provide a summary with the files that we modified and their location.
 
+Note: These are the files used to run <span style="text-decoration:overline">CEDice</span> (i.e., Cross Entropy and Dice loss optimizing only the SCNP-normalized logits).
+
 ## nnUNetv2
 
 Official repository: https://github.com/MIC-DKFZ/nnUNet/tree/master
+
+| File | Path |
+| -------- | ------- |
+| [nnUNetTrainerSCNPLoss.py](nnUNet/nnUNetTrainerSCNPLoss.py) | /work3/jmvma/envs/vic/lib/python3.10/site-packages/nnunetv2/training/nnUNetTrainer/nnUNetTrainerSCNPLoss.py |
+| [compound_losses_scnp.py](nnUNet/compound_losses_scnp.py) | /work3/jmvma/envs/vic/lib/python3.10/site-packages/nnunetv2/training/loss/compound_losses_scnp.py |
+
 
 ## Detectron with Deeplabv3+
 
