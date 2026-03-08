@@ -428,6 +428,14 @@
   <div class="hero-body">
     <div class="container">
       <h2 class="title is-3">Experiments and results</h2>
+        <div class="content has-text-justified">
+          <p>
+          We conducted 1) a benchmark across 13 datasets comparing 5-7 loss functions vs. Cross Entropy Dice loss with our SCNP; 2) a sensitivity analysis on SCNP's only hyper-parameter (neighborhood size); and 3) an ablation study comparing nine loss functions with and without SCNP.
+          Each experiment was run with five different random seeds.
+          In the benchmark, we employed medical and non-medical datasets, datasets with tubular and non-tubular structures, semantic and instance, binary and multi-class segmentation tasks, and three state-of-the-art DL frameworks (nnUNetv2, Detectron2, InstanSeg).
+          </p>
+        </div>
+
       <div id="results-carousel" class="carousel results-carousel">
        <div class="item">
            <!-- 1) Benchmark (results), 2) Qualitative results, 3) Sensitivity analysis, 4) Ablation
@@ -436,7 +444,7 @@
         <img src="static/images/results_dataset.png" alt="Results on the 13 datasets" loading="lazy"/>
         <!-- TODO: Replace with description of this result -->
         <h2 class="subtitle has-text-centered">
-            Benchmark across 13 datasets. SCNP improved topology accuracy without deteriorating Dice coefficient.
+            SCNP improved topology accuracy without deteriorating Dice coefficient.
         </h2>
       </div>
       <div class="item">
@@ -450,7 +458,7 @@
         <!-- Your image here -->
         <img src="static/images/sensitivity_analysis.png" alt="Sensitivity analysis" loading="lazy"/>
         <h2 class="subtitle has-text-centered">
-         Our sensitivity analysis on SCNP's only hyper-parameter (neighborhood size) indicates that its optimal value is correlated with the structure size.
+         Our sensitivity analysis indicates that the optimal neighborhood size of SCNP is correlated with the structure size.
        </h2>
      </div>
      <div class="item">
@@ -474,16 +482,22 @@
         <h2 class="title is-3">More</h2>
         <div class="content has-text-justified">
           <p>
-          TODO
+          Read our paper to learn more about:
           </p>
+          <ul>
+            <li>Topology loss functions.</li>
+            <li>SCNP gradients.</li>
+            <li>SCNP's limitation on datasets with extremely small structures (ISLES24 and MSLesSeg datasets).</li>
+            <li>Complete description of the datasets and setup used in our experiments.</li>
+            <li>SCNP's performance compared to simple dilation/erosion.</li>
+            <li>Extra computational resources required by SCNP (in the order of ms and GPU's MiB).</li>
+          </ul>
           <!--<table width="100%"><tr><td width="100%"><img src="static/images/motivation_topologyaccuracy.png"></td></tr></table>-->
         </div>
       </div>
     </div>
   </div>
 </section>
-
-
 
 
 <!--BibTex citation -->
@@ -496,12 +510,13 @@
           <span class="copy-text">Copy</span>
         </button>
       </div>
-      <pre id="bibtex-code"><code>@article{YourPaperKey2024,
-  title={Your Paper Title Here},
-  author={First Author and Second Author and Third Author},
-  journal={Conference/Journal Name},
-  year={2024},
-  url={https://your-domain.com/your-project-page}
+      <pre id="bibtex-code"><code>@article{valverde2026scnp,
+  title={Towards High-Quality Image Segmentation: Improving Topology Accuracy by Penalizing Neighbor Pixels},
+  author={Valverde, Juan Miguel and Papadopoulos, Dim and Larsen, Rasmus and Dahl, Anders},
+  journal={Proceedings of the IEEE/CVF conference on Computer Vision and Pattern Recognition},
+  pages={XX--YY},
+  year={2026},
+  url={https://jmlipman.github.io/SCNP-SameClassNeighborPenalization}
 }</code></pre>
     </div>
 </section>
