@@ -801,7 +801,7 @@ a:focus {
 
 .author-row img {
   width: 80%;
-  border-radius: 100%;
+  /*border-radius: 100%;*/
   /* ensure image height and width are the same */
 }
 
