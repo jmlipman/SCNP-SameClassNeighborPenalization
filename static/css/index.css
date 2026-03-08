@@ -147,8 +147,7 @@ body {
 
 .publication-authors {
     font-family: 'Inter', sans-serif !important;
-    font-weight: 500;
-    margin-bottom: 1.5rem;
+    margin-top: 10px;
 }
 
 .publication-venue {
@@ -174,9 +173,7 @@ body {
 }
 
 .publication-authors a {
-   color: var(--primary-color) !important;
    text-decoration: none;
-   font-weight: 600;
    transition: var(--transition);
    position: relative;
 }
