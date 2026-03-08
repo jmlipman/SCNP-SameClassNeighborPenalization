@@ -116,7 +116,6 @@ body {
 /* Publication Content Styling */
 .publication-title {
     font-family: 'Inter', sans-serif !important;
-    font-weight: 800 !important;
     color: var(--text-primary) !important;
     margin-bottom: 2rem !important;
     line-height: 1.1 !important;
@@ -747,8 +746,6 @@ a:focus {
 }
 
 /* ADDED (Miguel) */
-.publication-title {
-}
 
 .publication-banner {
   max-height: parent;
