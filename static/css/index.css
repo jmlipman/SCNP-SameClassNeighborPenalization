@@ -275,8 +275,13 @@ body {
 .results-carousel video {
   margin: 0;
   border-radius: var(--border-radius);
-  width: 100%;
-  height: auto;
+  /*width: 100%;
+  height: auto;*/
+  width: auto;           /* Overrides the forced 100% width */
+  height: 100%;          /* Keeps the image height filling the cell */
+  display: block;        /* Necessary for margin: 0 auto to work */
+  margin-left: auto;     /* These two lines are the key */
+  margin-right: auto;    /* for horizontal centering */
 }
 
 .results-carousel .subtitle {
