@@ -353,29 +353,81 @@
 </section>
 <!-- End teaser video -->
 
-<!-- Paper abstract -->
 <section class="section hero is-light">
   <div class="container is-max-desktop">
     <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
-        <h2 class="title is-3">Abstract</h2>
+        <h2 class="title is-3">Image segmentation quality and Topology accuracy</h2>
         <div class="content has-text-justified">
-          <!-- TODO: Replace with your paper abstract -->
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ullamcorper tellus sed ante aliquam tempus. Etiam porttitor urna feugiat nibh elementum, et tempor dolor mattis. Donec accumsan enim augue, a vulputate nisi sodales sit amet. Proin bibendum ex eget mauris cursus euismod nec et nibh. Maecenas ac gravida ante, nec cursus dui. Vivamus purus nibh, placerat ac purus eget, sagittis vestibulum metus. Sed vestibulum bibendum lectus gravida commodo. Pellentesque auctor leo vitae sagittis suscipit.
+          In image segmentation, performance is typically measured with pixel-level metrics, like Dice coefficient and accuracy.
+          However, these metrics alone tell very little about image segmentation quality.
+          Topology accuracy (i.e., the accuracy in the number of connected components and holes between the prediction and the ground truth) is a good indicator of image segmentation quality, particularly when the downstream tasks rely on precise counts of objects or structures and their connectivity.
+          For example, the connectivity of the roads in satellite images or in blood vessels is more important than their accuracy at the border.
           </p>
+          <table width="100%"><tr><td width="100%"><img src="static/images/motivation_topologyaccuracy.png"></td></tr></table>
         </div>
       </div>
     </div>
   </div>
 </section>
-<!-- End paper abstract -->
+
+<section class="section hero is-dark">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">SCNP — Same Class Neighbor Penalization</h2>
+        <div class="content has-text-justified">
+          <p>
+          We propose SCNP, a method to improve topology accuracy that is <b>fast</b>, <b>efficient</b>, works with <b>any kind of structures</b>, and it's <b>easy to use and incorporate</b> into existing training pipelines.
+          SCNP is applied to the logits, allowing you to use your favorite architecture, optimization strategy, data augmentation, and loss function.
+          In practice, this means that you only need to add a few (three) lines to your code to use SCNP.
+          </p>
+          <table width="100%"><tr><td width="100%"><img src="static/images/scnp_pipeline.png"></td></tr></table>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section hero is-light">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">How does SCNP work?</h2>
+        <div class="content has-text-justified">
+          <p>
+          TODO
+          </p>
+          <!--<table width="100%"><tr><td width="100%"><img src="static/images/motivation_topologyaccuracy.png"></td></tr></table>-->
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section hero is-dark">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">SCNP — Implementation</h2>
+        <div class="content has-text-justified">
+          <p>
+          TODO
+          </p>
+          <!--<table width="100%"><tr><td width="100%"><img src="static/images/motivation_topologyaccuracy.png"></td></tr></table>-->
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
 
 <!-- Image carousel -->
 <section class="hero is-small">
   <div class="hero-body">
     <div class="container">
+      <h2 class="title is-3">Experiments and results</h2>
       <div id="results-carousel" class="carousel results-carousel">
        <div class="item">
         <!-- TODO: Replace with your research result images -->
@@ -413,81 +465,6 @@
 <!-- End image carousel -->
 
 
-
-
-<!-- Youtube video -->
-<section class="hero is-small is-light">
-  <div class="hero-body">
-    <div class="container">
-      <!-- Paper video. -->
-      <h2 class="title is-3">Video Presentation</h2>
-      <div class="columns is-centered has-text-centered">
-        <div class="column is-four-fifths">
-
-          <div class="publication-video">
-            <!-- TODO: Replace with your YouTube video ID -->
-            <iframe src="https://www.youtube.com/embed/JkaxUblCGz0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-<!-- End youtube video -->
-
-
-<!-- Video carousel -->
-<section class="hero is-small">
-  <div class="hero-body">
-    <div class="container">
-      <h2 class="title is-3">Another Carousel</h2>
-      <div id="results-carousel" class="carousel results-carousel">
-        <div class="item item-video1">
-          <!-- TODO: Add poster image for better preview -->
-          <video poster="" id="video1" controls muted loop height="100%" preload="metadata">
-            <!-- Your video file here -->
-            <source src="static/videos/carousel1.mp4" type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-video2">
-          <!-- TODO: Add poster image for better preview -->
-          <video poster="" id="video2" controls muted loop height="100%" preload="metadata">
-            <!-- Your video file here -->
-            <source src="static/videos/carousel2.mp4" type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-video3">
-          <!-- TODO: Add poster image for better preview -->
-          <video poster="" id="video3" controls muted loop height="100%" preload="metadata">
-            <!-- Your video file here -->
-            <source src="static/videos/carousel3.mp4" type="video/mp4">
-          </video>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-<!-- End video carousel -->
-
-
-
-
-
-
-<!-- Paper poster -->
-<section class="hero is-small is-light">
-  <div class="hero-body">
-    <div class="container">
-      <h2 class="title">Poster</h2>
-
-      <!-- TODO: Replace with your poster PDF -->
-      <iframe  src="static/pdfs/sample.pdf" width="100%" height="550">
-          </iframe>
-
-      </div>
-    </div>
-  </section>
-<!--End paper poster -->
 
 
 
