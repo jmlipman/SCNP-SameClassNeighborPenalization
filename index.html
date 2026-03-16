@@ -437,13 +437,13 @@
         <code>
 <span style="color: #0000ff;">logits</span> = model(X)
 
+<span style="color: #008000;">### vvv SCNP vvv ### </span>
 <span style="color: #008000;"># MinPooling in the foreground</span>
 <span style="color: #0000ff;">t1</span> = -torch.nn.functional.max_pool2d(-(<span style="color: #0000ff;">logits</span>*<span style="color: #0000ff;">y_onehot</span>+<span style="color: #800080;">9999</span>*(<span style="color: #800080;">1</span>-<span style="color: #0000ff;">y_onehot</span>)), kernel_size=<span style="color: #800080;">3</span>, stride=<span style="color: #800080;">1</span>, padding=<span style="color: #800080;">1</span>)
-
 <span style="color: #008000;"># MaxPooling in the background</span>
 <span style="color: #0000ff;">t2</span> = torch.nn.functional.max_pool2d((<span style="color: #0000ff;">logits</span>*(<span style="color: #800080;">1</span>-<span style="color: #0000ff;">y_onehot</span>)-<span style="color: #800080;">9999</span>*<span style="color: #0000ff;">y_onehot</span>), kernel_size=<span style="color: #800080;">3</span>, stride=<span style="color: #800080;">1</span>, padding=<span style="color: #800080;">1</span>)
-
 <span style="color: #0000ff;">z_tilde</span> = <span style="color: #0000ff;">t1</span>*<span style="color: #0000ff;">y_onehot</span> + <span style="color: #0000ff;">t2</span>*(<span style="color: #800080;">1</span>-<span style="color: #0000ff;">y_onehot</span>)
+<span style="color: #008000;">### ^^^ SCNP ^^^ ### </span>
 
 <span style="color: #0000ff;">loss</span> = YourFavouriteLoss(SoftmaxOrSigmoid(<span style="color: #0000ff;">z_tilde</span>), Y)
         </code>
