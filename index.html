@@ -304,7 +304,7 @@
 
                   <!-- TODO: Replace with your GitHub repository URL -->
                   <span class="link-block">
-                    <a href="https://github.com/YOUR REPO HERE" target="_blank"
+                    <a href="https://github.com/jmlipman/SCNP-SameClassNeighborPenalization" target="_blank"
                     class="external-link button is-normal is-rounded is-dark">
                     <span class="icon">
                       <i class="fab fa-github"></i>
@@ -339,15 +339,13 @@
 <section class="hero teaser">
   <div class="container is-max-desktop">
     <div class="hero-body">
-      <!-- TODO: Replace with your teaser video -->
-      <video poster="" id="tree" autoplay controls muted loop height="100%" preload="metadata">
-        <!-- TODO: Add your video file path here -->
-        <source src="static/videos/banner_video.mp4" type="video/mp4">
-      </video>
-      <!-- TODO: Replace with your video description -->
+      <img src="static/images/teaser.png" />
       <h2 class="subtitle has-text-centered">
-        Aliquam vitae elit ullamcorper tellus egestas pellentesque. Ut lacus tellus, maximus vel lectus at, placerat pretium mi. Maecenas dignissim tincidunt vestibulum. Sed consequat hendrerit nisl ut maximus.
+          SCNP discourages trained models from generating clusters of false positives, thereby increasing topology accuracy. This is achieved by penalizing the poorest-classified neighbor of each logit during training.
       </h2>
+      <video poster="" id="tree" autoplay controls muted loop height="100%" preload="metadata">
+        <source src="static/videos/scnp_teaser.mp4" type="video/mp4">
+      </video>
     </div>
   </div>
 </section>
@@ -396,10 +394,13 @@
       <div class="column is-four-fifths">
         <h2 class="title is-3">How does SCNP work?</h2>
         <div class="content has-text-justified">
-          <p>
+          <!--<p>
           TODO
-          </p>
+          </p>-->
           <!--<table width="100%"><tr><td width="100%"><img src="static/images/motivation_topologyaccuracy.png"></td></tr></table>-->
+          <video poster="" id="tree" autoplay controls muted loop height="100%" preload="metadata">
+            <source src="static/videos/scnp_effects.mp4" type="video/mp4">
+          </video>
         </div>
       </div>
     </div>
