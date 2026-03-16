@@ -52,7 +52,7 @@ scnp = SCNP("2D", 3)
 z_logits = model(X)
 scnp_logits = scnp(z_logits, Y)
 
-loss = CrossEntropyDiceLoss(scnp_logits, Y)
-# loss = CrossEntropyDiceLoss(scnp_logits, Y) + CrossEntropyDiceLoss(z_logits, Y)
+loss = CrossEntropyDiceLoss(SoftmaxOrSigmoid(scnp_logits), Y)
+# loss = CrossEntropyDiceLoss(SoftmaxOrSigmoid(scnp_logits), Y) + CrossEntropyDiceLoss(SoftmaxOrSigmoid(z_logits), Y)
 
 loss.backward()...

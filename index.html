@@ -259,11 +259,11 @@
                         <p>Juan Miguel Valverde</p></a>
                   </div>
                   <div class="col-author text-center">
-                    <a href=""  target="_blank"><img src="static/images/dim.png" alt="Dim Papadopoulos" class="">
+                    <a href="https://orbit.dtu.dk/en/persons/dimitrios-papadopoulos/"  target="_blank"><img src="static/images/dim.png" alt="Dim Papadopoulos" class="">
                     <p>Dim Papadopoulos</p></a>
                   </div>
                   <div class="col-author text-center">
-                    <a href=""  target="_blank"><img src="static/images/rasmus.png" alt="Rasmus Larsen" class="">
+                    <a href="https://orbit.dtu.dk/en/persons/rasmus-larsen/"  target="_blank"><img src="static/images/rasmus.png" alt="Rasmus Larsen" class="">
                     <p>Rasmus Larsen</p></a>
                   </div>
                   <div class="col-author text-center">
@@ -340,7 +340,7 @@
   <div class="container is-max-desktop">
     <div class="hero-body">
       <h2 class="subtitle has-text-centered" style="font-weight: bold">
-          Summary: SCNP discourages trained models from generating clusters of false positives, thereby improving topology accuracy. This is achieved by penalizing the poorest-classified neighbor of each logit during training.
+          Summary: SCNP discourages trained models from generating topological errors, such as clusters of false positives, thereby improving topology accuracy. This is achieved by penalizing the poorest-classified neighbor of each logit during training.
       </h2>
       <img src="static/images/teaser.png" width="500px" style="display:flex; margin: auto"/>
     </div>
@@ -429,8 +429,27 @@
         <h2 class="title is-3">Implementation</h2>
         <div class="content has-text-justified">
           <p>
-          TODO
+          SCNP consists of three lines of code that need to be executed <u>only during training</u>:
           </p>
+
+<div style="background-color: #f5f5f5; padding: 15px; border-radius: 5px; font-family: 'Consolas', 'Monaco', 'Courier New', monospace; overflow-x: auto;">
+    <pre style="margin: 0; line-height: 1.5;">
+        <code>
+<span style="color: #0000ff;">logits</span> = model(X)
+
+<span style="color: #008000;"># MinPooling in the foreground</span>
+<span style="color: #0000ff;">t1</span> = -torch.nn.functional.max_pool2d(-(<span style="color: #0000ff;">logits</span>*<span style="color: #0000ff;">y_onehot</span>+<span style="color: #800080;">9999</span>*(<span style="color: #800080;">1</span>-<span style="color: #0000ff;">y_onehot</span>)), kernel_size=<span style="color: #800080;">3</span>, stride=<span style="color: #800080;">1</span>, padding=<span style="color: #800080;">1</span>)
+
+<span style="color: #008000;"># MaxPooling in the background</span>
+<span style="color: #0000ff;">t2</span> = torch.nn.functional.max_pool2d((<span style="color: #0000ff;">logits</span>*(<span style="color: #800080;">1</span>-<span style="color: #0000ff;">y_onehot</span>)-<span style="color: #800080;">9999</span>*<span style="color: #0000ff;">y_onehot</span>), kernel_size=<span style="color: #800080;">3</span>, stride=<span style="color: #800080;">1</span>, padding=<span style="color: #800080;">1</span>)
+
+<span style="color: #0000ff;">z_tilde</span> = <span style="color: #0000ff;">t1</span>*<span style="color: #0000ff;">y_onehot</span> + <span style="color: #0000ff;">t2</span>*(<span style="color: #800080;">1</span>-<span style="color: #0000ff;">y_onehot</span>)
+
+<span style="color: #0000ff;">loss</span> = YourFavouriteLoss(SoftmaxOrSigmoid(<span style="color: #0000ff;">z_tilde</span>), Y)
+        </code>
+    </pre>
+</div>
+
           <!--<table width="100%"><tr><td width="100%"><img src="static/images/motivation_topologyaccuracy.png"></td></tr></table>-->
         </div>
       </div>
