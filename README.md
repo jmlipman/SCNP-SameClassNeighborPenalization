@@ -6,6 +6,8 @@ We show its effectiveness on 13 datasets, including medical, non-medical dataset
 
 This repository contains our implementation of SCNP, the files required to run our experiments.
 
+🚀 Project page: [https://jmlipman.github.io/SCNP-SameClassNeighborPenalization/](https://jmlipman.github.io/SCNP-SameClassNeighborPenalization/)
+
 ### Latest updates
 
 📅 21-Feb-2026: SCNP has been accepted at **CVPR 2026**.
