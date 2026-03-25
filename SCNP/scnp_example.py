@@ -18,7 +18,7 @@ class SCNP(torch.nn.Module):
             self.mp = torch.nn.functional.max_pool3d
             self.ns = (neighborhood_size, neighborhood_size, neighborhood_size)
             self.st = (1, 1, 1)
-            self.pad = (neighborhood_size//2, neighborhood_size//2)
+            self.pad = (neighborhood_size//2, neighborhood_size//2, neighborhood_size//2)
         else:
             raise Exception("`dimensions` parameters must be either '2D' or '3D'")
 
